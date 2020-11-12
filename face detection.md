@@ -50,7 +50,7 @@ for i,path in enumerate(img_path):
 plt.show()
 ```
 
-![https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-28 下午4.53.27](face detection_files/截屏2020-10-28 下午4.53.27.png)
+![截屏2020-10-28 下午4.53.27](https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files//截屏2020-10-28 下午4.53.27.png)
 
 （4）数据集选用开源的widerface数据集。
 
@@ -64,11 +64,11 @@ plt.show()
 
 训练过程：
 
-![https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-26 上午10.44.57](face detection_files/截屏2020-10-26 上午10.44.57.png)
+![截屏2020-10-26 上午10.44.57](https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-26 上午10.44.57.png)
 
 结果得到的25个预选框，按照面积大小排序：
 
-![https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-26 下午1.42.03](face detection_files/截屏2020-10-26 下午1.42.03.png)
+![截屏2020-10-26 下午1.42.03](https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-26 下午1.42.03.png)
 
 之后根据选择的backbone网络来给不同的层分配预选框
 
@@ -78,7 +78,7 @@ plt.show()
 
 模型如下：
 
-![https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-26 下午2.26.08](face detection_files/截屏2020-10-26 下午2.26.08.png)
+![截屏2020-10-26 下午2.26.08](https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-26 下午2.26.08.png)
 
 SSD中6层网络每一层的feature map中的每个点分别预测4 6 6 6 4 4个候选框，而我们使用5 4 4 4 4 4的方式将之前k-means算法得到的候选框按照面积分配给6个卷积feature map。
 
@@ -145,15 +145,15 @@ def center(feature_map_size, box_num, box_size):
 
 localization loss：
 
-![https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-27 上午11.08.17](face detection_files/截屏2020-10-27 上午11.08.17.png)
+![截屏2020-10-27 上午11.08.17](https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-27 上午11.08.17.png)
 
 class loss：
 
-![https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-27 上午11.09.18](face detection_files/截屏2020-10-27 上午11.09.18.png)
+![截屏2020-10-27 上午11.09.18](https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-27 上午11.09.18.png)
 
 总loss：
 
-![https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-27 上午11.09.35](face detection_files/截屏2020-10-27 上午11.09.35.png)
+![截屏2020-10-27 上午11.09.35](https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-10-27 上午11.09.35.png)
 
 文中α = 1
 
@@ -229,6 +229,6 @@ Judge2：和Judge1一样用于计算loss
 
 （2）WIDER的测试集
 
-![https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-11-04 下午3.24.28](face detection_files/截屏2020-11-04 下午3.24.28.png)
+![截屏2020-11-04 下午3.24.28](https://github.com/Songfeixiang97/SSD-FaceDetection/blob/master/face%20detection_files/截屏2020-11-04 下午3.24.28.png)
 
 ​		由于训练的侧重方向和NMS的筛选阈值的设置有利于我们实际应用场景的检测，因此在WIDER测试集上的多人脸检测效果不是很好。但在我们的实际应用中效果较好。
